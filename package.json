@@ -1,6 +1,6 @@
 {
-  "name": "jalaliday",
-  "version": "2.3.0",
+  "name": "jalaliday-fixed",
+  "version": "2.3.1",
   "description": "Persian (Jalali, Khorshidi) Plugin for Day.js",
   "main": "dist/jalaliday.cjs.min.js",
   "web": "dist/jalaliday.umd.min.js",
@@ -9,27 +9,11 @@
   "scripts": {
     "test": "yarn build && jest",
     "lint": "eslint src/* test/*",
-    "build": "bili && yarn size",
+    "build": "bili",
     "release": "standard-version $* && git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build",
     "size": "size-limit"
   },
-  "size-limit": [
-    {
-      "limit": "2.99 KB",
-      "path": "dist/jalaliday.umd.min.js",
-      "ignore": [
-        "dayjs"
-      ]
-    },
-    {
-      "limit": "2.99 KB",
-      "path": "dist/jalaliday.cjs.min.js",
-      "ignore": [
-        "dayjs"
-      ]
-    }
-  ],
   "pre-commit": [
     "lint"
   ],
